@@ -4,3 +4,4 @@
 [submodule "content/themes/A-Better-Underscores-Theme"]
 	path = content/themes/A-Better-Underscores-Theme
 	url = git://github.com/burkeshartsis/A-Better-Underscores-Theme.git
+	Branch = master
