@@ -1,3 +1,6 @@
 [submodule "wp"]
 	path = wp
 	url = git://github.com/WordPress/WordPress.git
+[submodule "content/themes/A-Better-Underscores-Theme"]
+	path = content/themes/A-Better-Underscores-Theme
+	url = git://github.com/burkeshartsis/A-Better-Underscores-Theme.git
