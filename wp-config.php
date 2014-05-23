@@ -5,17 +5,26 @@
 if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'WP_LOCAL_DEV', true );
 	include( dirname( __FILE__ ) . '/local-config.php' );
+
+// Optionally define values for a development server
+// } elseif ( file_exists( dirname( __FILE__ ) . '/dev-config.php' ) ) {
+// 	include( dirname( __FILE__ ) . '/dev-config.php' );
+
+// Define values for production server
 } else {
 	define( 'WP_LOCAL_DEV', false );
 	define( 'DB_NAME', '%%DB_NAME%%' );
 	define( 'DB_USER', '%%DB_USER%%' );
 	define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
 	define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
+
+	define( 'AUTOMATIC_UPDATER_DISABLED', true );
 }
 
 // ========================
 // Custom Content Directory
 // ========================
+define( 'WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/' );
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
 define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
 
