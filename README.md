@@ -26,9 +26,17 @@ Getting Started
 
 For those of you looking to manage frontend packages you can also install [Node](http://nodejs.org/) and [Bower](http://bower.io/). Given the advanced usage of these tools and the fact the the project does not depend on your usage of them I will leave this up to you to figure out. You can find some additional theme documentation in `/content/themes/A-Better-Underscores-Theme/readme.md`.
 
+Updating WordPress
+------------------
+- From the command line navigate to `/wp/`.
+- Run `git fetch --tags`.
+- Check out the most recent tag `git checkout x.x.x` where x is the most recent WordPress update.
+- Navigate back to your project root.
+- Commit the updated WordPress files to the project repository.
+
+
 Theme Setup
 -----------
-
 You'll need to do a five-step find and replace on the name in all the templates.
 
 1. Search for `'_s'` (inside single quotations) to capture the text domain.
